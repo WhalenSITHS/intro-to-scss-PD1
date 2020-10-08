@@ -1,4 +1,12 @@
-@import "_variables.scss";
+$colors: (
+  primary: #45a29e,
+  primary-light: #66fcf1,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
 html,
 body {
   margin: 0;
@@ -6,8 +14,6 @@ body {
   box-sizing: border-box;
   font-size: 62.5%;
   //px are no bueno, rem are relative units, 1 rem = 10px,vh or  viewport height, vw or viewport width
-  font-family: "Josefin Sans", sans-serif;
-  background-color: black;
 }
 
 .header {
@@ -20,7 +26,6 @@ body {
   background-size: cover;
   height: 100vh;
   position: relative;
-  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
 }
 .header-text-box {
   position: absolute;
@@ -29,20 +34,16 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 5rem;
-  text-transform: uppercase;
 }
 .header-primary {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
 }
 
 .heading-primary-main {
   //display: block; this is 1 method for seperation
-  letter-spacing: 1rem;
-  text-shadow: #333 6px 6px;
 }
 .heading-primary-sub {
   //display: block; this is 1 method for seperation
