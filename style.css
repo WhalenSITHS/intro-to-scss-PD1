@@ -5,6 +5,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: black;
 }
 
 .header {
@@ -13,6 +15,8 @@ body {
   background-size: cover;
   height: 100vh;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
 
 .header-text-box {
@@ -37,6 +41,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  letter-spacing: 1rem;
+  text-shadow: #333 5px 5px;
 }
 
 .heading-primary-sub {
